@@ -42,4 +42,10 @@ public class EvalBbsController {
 		dao.delete(bno);
 		return "redirect:list";
 	}
+	
+	@RequestMapping("/detail")
+	public String detail(String bno,Model model) {
+		model.addAttribute("dto",dao.detail(bno));
+		return "detail";
+	}
 }

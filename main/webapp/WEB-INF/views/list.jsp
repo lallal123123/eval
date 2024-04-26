@@ -23,7 +23,7 @@
         <tbody>
             <c:forEach var="dto" items="${list}">
                 <tr>
-                    <td>${dto.bno}</td><td>${dto.title}</td><td>${dto.writer}</td><td>${dto.regdate}</td><td><a href="delete?bno=${dto.bno}">삭제</a></td>
+                    <td>${dto.bno}</td><td><a href="detail?bno=${dto.bno}">${dto.title}</a></td><td>${dto.writer}</td><td>${dto.regdate}</td><td><a href="delete?bno=${dto.bno}">삭제</a></td>
                 </tr>
 
             </c:forEach>

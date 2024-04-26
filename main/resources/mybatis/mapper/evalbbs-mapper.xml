@@ -7,6 +7,9 @@
 		select * from evalbbs
 	</select>
 	
+	<select id="detail" resultType="com.green.evalBbs.dto.EvalBbsDto">
+		select * from evalbbs where bno=#{bno}
+	</select>
 	<insert id="write">
 		insert into evalbbs values(null,#{dto.title},#{dto.content},#{dto.writer},now())
 	</insert>
@@ -14,4 +17,6 @@
 	<delete id="delete">
 		delete from evalbbs where bno=#{bno}
 	</delete>
+	
+	
 	</mapper>
