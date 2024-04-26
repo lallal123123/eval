@@ -6,4 +6,8 @@
 	<select id="list" resultType="com.green.evalBbs.dto.EvalBbsDto">
 		select * from evalbbs
 	</select>
+	
+	<insert id="write">
+		insert into evalbbs values(null,#{dto.title},#{dto.content},#{dto.writer},now())
+	</insert>
 	</mapper>

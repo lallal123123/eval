@@ -11,9 +11,16 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Index Page</h1>
+    <h1>WriteForm Page</h1>
 
-    <a href="list">목록보기</a>
-    <a href="writeForm">글 작성하기</a>
+    <form action="write" method="post">
+        제  목 : <input type="text" name="title"><br>
+        내  용 : <input type="text" name="content"><br>
+        작성자 : <input type="text" name="writer"><br>
+        <input type="submit" value="등록하기"><br>
+    </form>
+    
+    
+
 </body>
 </html>

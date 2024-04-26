@@ -13,6 +13,7 @@
 <body>
     <h1>List Page</h1>
 
+    <a href="writeForm">글작성하기</a>
     <table border="1">
         <thead>
             <tr>
