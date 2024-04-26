@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.green.evalBbs.dao.IEvalBbsDao;
 import com.green.evalBbs.dto.EvalBbsDto;
@@ -38,13 +39,13 @@ public class EvalBbsController {
 	}
 	
 	@RequestMapping("/delete")
-	public String delete(String bno) {
+	public String delete(@RequestParam("bno") String bno) {
 		dao.delete(bno);
 		return "redirect:list";
 	}
 	
 	@RequestMapping("/detail")
-	public String detail(String bno,Model model) {
+	public String detail(@RequestParam("bno") String bno,Model model) {
 		model.addAttribute("dto",dao.detail(bno));
 		return "detail";
 	}
