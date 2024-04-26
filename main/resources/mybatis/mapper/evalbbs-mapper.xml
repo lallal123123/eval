@@ -10,4 +10,8 @@
 	<insert id="write">
 		insert into evalbbs values(null,#{dto.title},#{dto.content},#{dto.writer},now())
 	</insert>
+	
+	<delete id="delete">
+		delete from evalbbs where bno=#{bno}
+	</delete>
 	</mapper>

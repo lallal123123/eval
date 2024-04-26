@@ -17,13 +17,13 @@
     <table border="1">
         <thead>
             <tr>
-                <th>번호</th><th>제목</th><th>작성자</th><th>작성일자</th>
+                <th>번호</th><th>제목</th><th>작성자</th><th>작성일자</th><th>삭제</th>
             </tr>
         </thead>
         <tbody>
             <c:forEach var="dto" items="${list}">
                 <tr>
-                    <td>${dto.bno}</td><td>${dto.title}</td><td>${dto.writer}</td><td>${dto.regdate}</td>
+                    <td>${dto.bno}</td><td>${dto.title}</td><td>${dto.writer}</td><td>${dto.regdate}</td><td><a href="delete?bno=${dto.bno}">삭제</a></td>
                 </tr>
 
             </c:forEach>
